@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITBootcamp</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div>
+        <header>
+            <h1>ITBootcamp Chat</h1>
+            <nav>
+                <div>
+                    <button id="general" class="btn">#general</button>
+                    <button  id="js" class="btn">#js</button>
+                    <button  id="test" class="btn">#test</button>
+                    <button  id="homework" class="btn">#homework</button>
+                </div>
+            </nav>
+         </header>
+        <section>
+            <ul>
+                <!-- Messages -->
+            </ul>
+        </section>
+        <footer>
+            <form id="formNewMessage">
+                <textarea name="inputMessage" id="inputMessage" placeholder="Your message..."></textarea>
+                <input type="submit" value="Send" id="btnSend" class="btn">
+            </form>
+            <form id="formUpdateUsername">
+                <input type="text" name="inputUsername" id="inputUsername" placeholder="New username...">
+                <input type="submit" value="Update username" id="btnUpdateUsername" class="btn">
+            </form>
+            <form id="formColor">
+                <input type="color" name="inputColor" id="inputColor" value="#ffffff">
+                <input type="submit" value="Update bg color" id="btnUpdateUsername" class="btn">
+            </form>
+            <div id="divUpdatedUsername"></div>
+        </footer>
+    </div>
+
+    <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyD0RmVYsHJ4H71gerXs2e9GBnU-W1lWmSo",
+        authDomain: "itbootcamp-osnazivanje-1b362.firebaseapp.com",
+        databaseURL: "https://itbootcamp-osnazivanje-1b362.firebaseio.com",
+        projectId: "itbootcamp-osnazivanje-1b362",
+        storageBucket: "itbootcamp-osnazivanje-1b362.appspot.com",
+        messagingSenderId: "483426788514",
+        appId: "1:483426788514:web:1fb886253a87a8ca84a3fb"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    let db = firebase.firestore();
+    </script>
+    <!-- MAIN SCRIPT -->
+    <script type="module" src="app.js" type="module"></script>
+</body>
+</html>

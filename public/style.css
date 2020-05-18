@@ -1,0 +1,128 @@
+body {
+    text-align: center;
+    color: purple;
+}
+/* Navbar */
+.navbar-header {
+    font-size: 30px;
+    font-weight: bold;
+}
+/* Buttons */
+.nav-btn {
+    width: 24%;
+}
+.submit-btn {
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.btn, .submit-btn{
+    width: 100%;
+    font-size: 18px;
+    background-color: purple;
+    color: white;
+}
+.btn-selected{
+    background-color: rgb(50, 10, 50);
+    color: bisque;
+}
+.btn:hover, .submit-btn:hover{
+    background-color: rgb(70,9,70);
+    color: white;
+    cursor: pointer;
+}
+/* Inputs and textarea */
+input:focus, textarea:focus{
+    border: 3px solid purple !important;
+    border-radius: 5px;
+}
+/* Header, footer and section */
+header, footer, ul{
+    position: absolute;
+    width: 60%;
+    /* Align center */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+header{
+    top: 0;
+    height: 20%;
+}
+footer{
+    bottom: 0;
+    height: 27%;
+}
+ul{
+    list-style-type: none;
+    font-size: 20px;
+    /* Pozicioniranje ispod top sekcije i iznad bottom sekcije */
+    top: 20%;
+    bottom: 27%;
+    /* ul centralno postavljena, ali tekst levo poravnat */
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    /* dodamo skrolovanje poruka */
+    overflow-y: auto;
+    /* prelom bilo koje reči bez razmaka */
+    word-wrap: break-word;
+}
+/* Messages */
+ul>li{
+    width: 60%;
+    background-color: thistle;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    padding: 20px;
+    border-radius: 0px 20px 20px 20px;
+}
+.date{
+    color: gray;
+}
+/* Messages me */
+.me{
+    margin-left: auto;
+    background-color: bisque !important;
+    border-radius: 20px 0px 20px 20px !important;
+}
+/* Info box at the bottom */
+.username{
+    font-weight: bold;
+}
+#divUpdatedUsername{
+    font-size: 20px;
+}
+#spanNewUsername{
+    font-weight: bold;
+}
+/* Trash icon */
+li {
+    position: relative;
+}
+i {
+    position: absolute;
+    color: gray;
+    bottom: 5px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Tablets i mobile phones */
+@media only screen and (max-width: 850px) {
+    header, footer, ul {
+        width: 100%;
+        padding: 5px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    ul{
+        font-size: 16px !important;
+        width: 100% !important;
+    }
+    ul>li{
+        padding: 10px;
+    }
+}
